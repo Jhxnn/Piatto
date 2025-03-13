@@ -12,6 +12,8 @@ public class Owner {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID ownerId;
 
+    private LicensePlate licensePlate;
+
     private String cpf;
 
     private String name;

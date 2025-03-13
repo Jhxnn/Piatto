@@ -15,6 +15,4 @@ public class LicensePlate {
 
     private String licensePlate;
 
-
-
 }
