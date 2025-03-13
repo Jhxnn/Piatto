@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
@@ -55,7 +56,7 @@ public class LicensePlateController {
     }
 
     @PostMapping("/only-text")
-    public ResponseEntity<String> licensePlateData(@RequestParam("file") MultipartFile file){
+    public ResponseEntity<String> licensePlateData(@RequestParam("file") MultipartFile file) throws IOException {
         return ResponseEntity.status(HttpStatus.OK).body(licensePlateService.licensePlateData(file));
     }
 
