@@ -1,4 +1,4 @@
 package com.Piatto.Dtos;
 
-public record LicensePlateDto(String licensePlate) {
+public record LicensePlateDto(String licensePlate, byte image) {
 }

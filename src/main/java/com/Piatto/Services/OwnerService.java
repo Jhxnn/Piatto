@@ -24,19 +24,19 @@ public class OwnerService {
         return ownerRepository.findById(id).orElseThrow(() -> new RuntimeException("Cannot be found"));
     }
 
-    public Owner createLicensePlate(OwnerDto ownerDto){
+    public Owner createOwner(OwnerDto ownerDto){
         var owner = new Owner();
         BeanUtils.copyProperties(ownerDto, owner);
         return ownerRepository.save(owner);
     }
 
-    public Owner updateLicensePlate(UUID id, OwnerDto ownerDto){
+    public Owner updateOwner(UUID id, OwnerDto ownerDto){
         var owner = findById(id);
         BeanUtils.copyProperties(ownerDto, owner);
         return ownerRepository.save(owner);
     }
 
-    public void deleteLicensePlate(UUID id){
+    public void deleteOwner(UUID id){
         var owner = findById(id);
         ownerRepository.delete(owner);
     }
