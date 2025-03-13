@@ -1,4 +1,4 @@
-package com.Piatto.Services;
+package com.Piatto.services;
 
 import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;

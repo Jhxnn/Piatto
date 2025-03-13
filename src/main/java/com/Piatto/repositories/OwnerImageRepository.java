@@ -1,6 +1,6 @@
-package com.Piatto.Repositories;
+package com.Piatto.repositories;
 
-import com.Piatto.Models.OwnerImage;
+import com.Piatto.models.OwnerImage;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

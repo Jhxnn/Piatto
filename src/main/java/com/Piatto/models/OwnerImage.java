@@ -1,4 +1,4 @@
-package com.Piatto.Models;
+package com.Piatto.models;
 
 import jakarta.persistence.*;
 
@@ -10,10 +10,15 @@ public class OwnerImage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private UUID ownerImageId;
 
-    private byte image;
+    @Lob
+    @Column(name = "image")
+    private byte[] image;
 
+    @ManyToOne
+    @JoinColumn(referencedColumnName = "id",name = "owner")
     private Owner owner;
 
     public UUID getOwnerImageId() {
@@ -24,11 +29,11 @@ public class OwnerImage {
         this.ownerImageId = ownerImageId;
     }
 
-    public byte getImage() {
+    public byte[] getImage() {
         return image;
     }
 
-    public void setImage(byte image) {
+    public void setImage(byte[] image) {
         this.image = image;
     }
 

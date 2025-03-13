@@ -1,4 +1,4 @@
-package com.Piatto.Models;
+package com.Piatto.models;
 
 import jakarta.persistence.*;
 
@@ -10,8 +10,11 @@ import java.util.UUID;
 public class Owner {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private UUID ownerId;
 
+    @ManyToOne
+    @JoinColumn(referencedColumnName = "id", name = "license-plate")
     private LicensePlate licensePlate;
 
     private String cpf;

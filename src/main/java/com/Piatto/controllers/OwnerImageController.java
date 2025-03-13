@@ -1,9 +1,8 @@
-package com.Piatto.Controllers;
+package com.Piatto.controllers;
 
-import com.Piatto.Dtos.OwnerImageDto;
-import com.Piatto.Models.OwnerImage;
-import com.Piatto.Repositories.OwnerImageRepository;
-import com.Piatto.Services.OwnerImageService;
+import com.Piatto.dtos.OwnerImageDto;
+import com.Piatto.models.OwnerImage;
+import com.Piatto.services.OwnerImageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

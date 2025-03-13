@@ -1,4 +1,4 @@
-package com.Piatto.Dtos;
+package com.Piatto.dtos;
 
 import java.util.UUID;
 

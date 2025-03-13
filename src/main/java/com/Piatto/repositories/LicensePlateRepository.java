@@ -1,6 +1,6 @@
-package com.Piatto.Repositories;
+package com.Piatto.repositories;
 
-import com.Piatto.Models.LicensePlate;
+import com.Piatto.models.LicensePlate;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

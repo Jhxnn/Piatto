@@ -1,10 +1,8 @@
-package com.Piatto.Controllers;
+package com.Piatto.controllers;
 
-import com.Piatto.Dtos.LicensePlateDto;
-import com.Piatto.Models.LicensePlate;
-import com.Piatto.Repositories.LicensePlateRepository;
-import com.Piatto.Services.LicensePlateService;
-import org.apache.coyote.Response;
+import com.Piatto.dtos.LicensePlateDto;
+import com.Piatto.models.LicensePlate;
+import com.Piatto.services.LicensePlateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

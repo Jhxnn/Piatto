@@ -1,8 +1,8 @@
-package com.Piatto.Services;
+package com.Piatto.services;
 
-import com.Piatto.Dtos.OwnerDto;
-import com.Piatto.Models.Owner;
-import com.Piatto.Repositories.OwnerRepository;
+import com.Piatto.dtos.OwnerDto;
+import com.Piatto.models.Owner;
+import com.Piatto.repositories.OwnerRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

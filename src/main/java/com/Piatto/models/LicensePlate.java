@@ -1,4 +1,4 @@
-package com.Piatto.Models;
+package com.Piatto.models;
 
 
 import jakarta.persistence.*;
@@ -11,11 +11,14 @@ public class LicensePlate {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name ="id")
     private UUID licensePlateId;
 
     private String licensePlate;
 
-    private byte image;
+    @Lob
+    @Column(name = "image")
+    private byte[] image;
 
     public UUID getLicensePlateId() {
         return licensePlateId;
@@ -33,11 +36,11 @@ public class LicensePlate {
         this.licensePlate = licensePlate;
     }
 
-    public byte getImage() {
+    public byte[] getImage() {
         return image;
     }
 
-    public void setImage(byte image) {
+    public void setImage(byte[] image) {
         this.image = image;
     }
 }

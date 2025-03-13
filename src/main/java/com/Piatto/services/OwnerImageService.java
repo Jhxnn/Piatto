@@ -1,10 +1,8 @@
-package com.Piatto.Services;
+package com.Piatto.services;
 
-import com.Piatto.Dtos.LicensePlateDto;
-import com.Piatto.Dtos.OwnerImageDto;
-import com.Piatto.Models.Owner;
-import com.Piatto.Models.OwnerImage;
-import com.Piatto.Repositories.OwnerImageRepository;
+import com.Piatto.dtos.OwnerImageDto;
+import com.Piatto.models.OwnerImage;
+import com.Piatto.repositories.OwnerImageRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
