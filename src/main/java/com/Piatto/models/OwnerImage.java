@@ -14,7 +14,7 @@ public class OwnerImage {
     private UUID ownerImageId;
 
     @Lob
-    @Column(name = "image")
+    @Column(columnDefinition = "BYTEA")
     private byte[] image;
 
     @ManyToOne

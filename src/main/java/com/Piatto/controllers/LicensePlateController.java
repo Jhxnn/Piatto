@@ -56,7 +56,7 @@ public class LicensePlateController {
     }
 
     @PostMapping("/only-text")
-    public ResponseEntity<String> licensePlateData(@RequestParam("file") MultipartFile file) throws IOException {
+    public ResponseEntity<String> licensePlateData(@RequestParam("file") MultipartFile file){
         return ResponseEntity.status(HttpStatus.OK).body(licensePlateService.licensePlateData(file));
     }
 

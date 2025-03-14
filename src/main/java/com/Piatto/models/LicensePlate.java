@@ -17,7 +17,7 @@ public class LicensePlate {
     private String licensePlate;
 
     @Lob
-    @Column(name = "image")
+    @Column(columnDefinition = "BYTEA")
     private byte[] image;
 
     public UUID getLicensePlateId() {
