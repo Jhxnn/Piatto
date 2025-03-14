@@ -16,9 +16,6 @@ public class LicensePlate {
 
     private String licensePlate;
 
-    @Lob
-    @Column(columnDefinition = "BYTEA")
-    private byte[] image;
 
     public UUID getLicensePlateId() {
         return licensePlateId;
@@ -36,11 +33,4 @@ public class LicensePlate {
         this.licensePlate = licensePlate;
     }
 
-    public byte[] getImage() {
-        return image;
-    }
-
-    public void setImage(byte[] image) {
-        this.image = image;
-    }
 }

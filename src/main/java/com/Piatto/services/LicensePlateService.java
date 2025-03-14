@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.util.List;
 import java.util.UUID;
 
@@ -46,21 +47,19 @@ public class LicensePlateService {
     public void deleteLicensePlate(UUID id){
         var licensePlate = findById(id);
         licensePlateRepository.delete(licensePlate);
-    }
+        }
 
     @Transactional
     public String licensePlateData(MultipartFile file){
+
         var licensePlate = new LicensePlate();
-        try{
-            licensePlate.setImage(file.getBytes());
-            String licensePlateValue= ocrService.extractPlateText(file);
-            licensePlate.setLicensePlate(licensePlateValue);
-            licensePlateRepository.save(licensePlate);
-            return licensePlateValue;
+        String licensePlateValue= ocrService.extractPlateText(file);
+        licensePlate.setLicensePlate(licensePlateValue);
+        licensePlateRepository.save(licensePlate);
+        return licensePlateValue;
+
         }
-        catch (IOException e){
-            return "Erro ao converter a imagem para salvar no banco: " + e;
-        }
-    }
+
+
 
 }

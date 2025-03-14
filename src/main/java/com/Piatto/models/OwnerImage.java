@@ -29,14 +29,6 @@ public class OwnerImage {
         this.ownerImageId = ownerImageId;
     }
 
-    public byte[] getImage() {
-        return image;
-    }
-
-    public void setImage(byte[] image) {
-        this.image = image;
-    }
-
     public Owner getOwner() {
         return owner;
     }
