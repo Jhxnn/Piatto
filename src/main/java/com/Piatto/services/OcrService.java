@@ -8,6 +8,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 @Service
 public class OcrService {
@@ -24,12 +25,14 @@ public class OcrService {
         try {
             File tempFile = convertMultipartFileToFile(multipartFile);
             String result = tesseract.doOCR(tempFile).replaceAll("\\s", "");
+            String resulFormat = result.replaceAll("[^a-zA-Z0-9\\\\s]", "");
+
 
             if (!tempFile.delete()) {
                 System.err.println("Falha ao excluir o arquivo temporário: " + tempFile.getName());
             }
 
-            return result;
+            return resulFormat;
         } catch (TesseractException | IOException e) {
             e.printStackTrace();
             return "Erro ao ler a placa";
