@@ -58,13 +58,15 @@
 
 		<dependency>
 			<groupId>org.bytedeco</groupId>
-			<artifactId>javacv-platform</artifactId>
-			<version>1.5.5</version>
+			<artifactId>javacv</artifactId>
+
 		</dependency>
+
 		<dependency>
 			<groupId>org.bytedeco</groupId>
 			<artifactId>opencv</artifactId>
 		</dependency>
+
 
 
 

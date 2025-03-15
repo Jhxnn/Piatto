@@ -13,7 +13,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import static org.bytedeco.opencv.global.opencv_cudaimgproc.cvtColor;
 import static org.bytedeco.opencv.global.opencv_imgcodecs.imread;
 import static org.bytedeco.opencv.global.opencv_imgcodecs.imwrite;
 import static org.bytedeco.opencv.global.opencv_imgproc.*;
@@ -57,7 +56,7 @@ public class OcrService {
     private Mat processImageWithJavaCV(File inputFile) {
         Mat image = imread(inputFile.getAbsolutePath());
         Mat grayImage = new Mat();
-        cvtColor(image, grayImage, CV_BGR2GRAY);
+        cvtColor(image, grayImage, COLOR_BGR2GRAY);
         Mat contrastImage = new Mat();
         equalizeHist(grayImage, contrastImage);
         Mat blurredImage = new Mat();
